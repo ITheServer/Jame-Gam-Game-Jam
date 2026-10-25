@@ -21,6 +21,7 @@ public class TutorialManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameStateSO.isPlayerAlive = true;
         gameStateSO.tutorialStep = 0;
         gameStateSO.tutorialComplete = false;
         enemySpawner.SetActive(false);

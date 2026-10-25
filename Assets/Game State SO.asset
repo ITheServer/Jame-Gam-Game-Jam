@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1822d2dc76b3da4894dc68e3f432050, type: 3}
   m_Name: Game State SO
   m_EditorClassIdentifier: 
-  currentRoundTimer: 0
-  currentRound: 0
-  inRound: 0
-  money: 0
+  survivalTimer: 5.6651826
+  difficultyScaling: 1.018884
+  score: 0
+  highScore: 0
+  tutorialStep: 2
+  tutorialComplete: 1
+  shotsLanded: 8
+  slimesKilled: 3
+  isPlayerAlive: 1
