@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerSprite : MonoBehaviour
 {
     [SerializeField] private PlayerData playerData;
-    [SerializeField] private GameStateSO gameStateSO;
-    private SpriteRenderer sr;
     [SerializeField] private Material invulnerabilityMaterial;
     [SerializeField] private Material damageMaterial;
     private Material baseMaterial;
@@ -15,33 +13,32 @@ public class PlayerSprite : MonoBehaviour
 
     void Awake()
     {
-        sr = GetComponent<SpriteRenderer>();
-        baseMaterial = sr.material;
+        baseMaterial = playerData.sr.material;
         playerData.isHurt = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!gameStateSO.isPlayerAlive)
+        if (!playerData.gameStateSO.isPlayerAlive)
         {
-            sr.sprite = playerDead;
+            playerData.sr.sprite = playerDead;
         }
         if (playerData.invulnerabilityTime > 0)
         {
             if (playerData.isHurt)
             {
-                sr.material = damageMaterial;
+                playerData.sr.material = damageMaterial;
             }
             else
             {
-                sr.material = invulnerabilityMaterial;
+                playerData.sr.material = invulnerabilityMaterial;
             }
         }
         else
         {
             playerData.isHurt = false;
-            sr.material = baseMaterial;
+            playerData.sr.material = baseMaterial;
         }
     }
 }

@@ -29,5 +29,13 @@ public class EnemySprite : MonoBehaviour
         {
             enemyData.sr.material = baseMaterial;
         }
+        //if (enemyData.currentCoolDown < 1)
+        //{
+        //    enemyData.sr.material.color = new Color(enemyData.currentCoolDown, 1, enemyData.currentCoolDown);
+        //}
+        //else
+        //{
+        //    enemyData.sr.material.color = Color.white;
+        //}
     }
 }

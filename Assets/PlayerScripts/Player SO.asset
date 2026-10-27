@@ -9,17 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49803d9628b63dd4aa9d7f599bd0a054, type: 3}
+  m_Script: {fileID: 11500000, guid: afa00bad016ebd9448ff62b2da162463, type: 3}
   m_Name: Player SO
   m_EditorClassIdentifier: 
-  recoilDirection: {x: 0.49187684, y: 0.87066483}
+  recoilDirection: {x: 0, y: 0}
   applyRecoil: 0
-  recoilPower: 100
-  dashMultiplier: 5
-  health: 5
+  recoilPower: 0
+  dashMultiplier: 0
+  health: 3
   maxHealth: 6
-  invulnerabilityTime: -0.27217075
+  invulnerabilityTime: 0.3
   isHurt: 1
-  bullets: 4
+  bullets: 6
   bulletsPerChamber: 12
-  reloadTime: 2
+  shotCooldown: 2
+  reloadTime: 1
+  bulletsShotAtOnce: 3
+  coneOfAccuracy: 45
+  currentCharacter: 10

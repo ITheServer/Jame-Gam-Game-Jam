@@ -6,18 +6,18 @@ using UnityEngine.UI;
 public class PlayerBarScript : MonoBehaviour
 {
     [SerializeField] private Image ir;
-    [SerializeField] private PlayerData playerData;
+    [SerializeField] private PlayerSO playerSO;
     [SerializeField] private float fillAmount;
     [SerializeField] private float barType;
     void Update()
     {
         if (barType == 0)
         {
-            fillAmount = (float)playerData.health / (float)playerData.maxHealth;
+            fillAmount = (float)playerSO.health / (float)playerSO.maxHealth;
         }
         if (barType == 1)
         {
-            fillAmount = (float)playerData.bullets / (float)playerData.bulletsPerChamber;
+            fillAmount = (float)playerSO.bullets / (float)playerSO.bulletsPerChamber;
         }
         ir.fillAmount = fillAmount;
     }

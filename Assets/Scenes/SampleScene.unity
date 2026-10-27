@@ -123,6 +123,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &112484474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 112484476}
+  - component: {fileID: 112484475}
+  m_Layer: 0
+  m_Name: CharacterManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &112484475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112484474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dcdf7f19659290458ff3098f11395a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSO: {fileID: 11400000, guid: c8e6b37e3958545448c9206ba5c0c653, type: 2}
+--- !u!4 &112484476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112484474}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.23007274, y: 0.46412954, z: 0.9936609}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &123869040
 GameObject:
   m_ObjectHideFlags: 0
@@ -6132,7 +6177,7 @@ Rigidbody2D:
   m_LinearDrag: 20
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: fa8bfc92bdf7cab4a80503be962b605c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -6512,13 +6557,15 @@ GameObject:
   m_Component:
   - component: {fileID: 1269014077}
   - component: {fileID: 1269014076}
-  - component: {fileID: 1269014084}
+  - component: {fileID: 1269014086}
   - component: {fileID: 1269014083}
   - component: {fileID: 1269014082}
   - component: {fileID: 1269014078}
   - component: {fileID: 1269014081}
+  - component: {fileID: 1269014084}
   - component: {fileID: 1269014080}
   - component: {fileID: 1269014079}
+  - component: {fileID: 1269014085}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -6606,15 +6653,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2dd6b6b2223d7541a203fcc4ef057fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: c8e6b37e3958545448c9206ba5c0c653, type: 2}
-  movementSpeed: 80
-  dashCoolDown: 1
+  playerData: {fileID: 1269014086}
   currentDashCoolDown: 0
   recoilTimer: 0
-  recoilLength: 0.2
-  dashLength: 0.15
   dashSFX: {fileID: 5401760892895427667, guid: 857cc2fde80f46444abd02a8eb1955a8, type: 3}
-  gameStateSO: {fileID: 11400000, guid: b419df8555e1af446816c35883f1c20a, type: 2}
 --- !u!61 &1269014079
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6699,14 +6741,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db99db98a325e8942af3a27d9489507c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: c8e6b37e3958545448c9206ba5c0c653, type: 2}
-  maxCoolDown: 0.3
+  playerData: {fileID: 1269014086}
   currentCoolDown: 0
   bullet: {fileID: 1456450190216883262, guid: 4c7453a8f5c0050408cbdaaa9acdb748, type: 3}
   gunPos: {fileID: 1599383597}
   shotSFX: {fileID: 4282190256435153653, guid: 0beb754faff551441a5914c879119769, type: 3}
-  reloadSFX: {fileID: 5833623294524002725, guid: 8eaabe09b291edd488ef664bd09746cd, type: 3}
-  gameStateSO: {fileID: 11400000, guid: b419df8555e1af446816c35883f1c20a, type: 2}
+  reloadSFX: {fileID: 1269014085}
 --- !u!114 &1269014082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6719,8 +6759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99467a1aea07e224d956da3e98d7ce12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: c8e6b37e3958545448c9206ba5c0c653, type: 2}
-  gameStateSO: {fileID: 11400000, guid: b419df8555e1af446816c35883f1c20a, type: 2}
+  playerData: {fileID: 1269014086}
   pickupSFX: {fileID: 2388605412929483672, guid: bc69ca6a05e7b3c4198f241abe53700e, type: 3}
   hurtSFX: {fileID: 704283906790248408, guid: ce44bea0549cd734e8ac734f29a77d2d, type: 3}
 --- !u!114 &1269014083
@@ -6735,8 +6774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2904c6702ffcab144a66367dc2c19c87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: c8e6b37e3958545448c9206ba5c0c653, type: 2}
-  gameStateSO: {fileID: 11400000, guid: b419df8555e1af446816c35883f1c20a, type: 2}
+  playerData: {fileID: 1269014086}
   invulnerabilityMaterial: {fileID: 2100000, guid: c8df9ec38087e0a4686f030864999032, type: 2}
   damageMaterial: {fileID: 2100000, guid: 3f59fd8f3fc81bf4380c02bc2c3f5042, type: 2}
   playerDead: {fileID: 21300000, guid: 97750f4c9bced9947bf6379796625d20, type: 3}
@@ -6755,6 +6793,128 @@ MonoBehaviour:
   squashFactorX: 0
   squashFactorY: 0
   squashAmount: 0.03
+--- !u!82 &1269014085
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269014075}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: eca5e028c40ea00499bb78ef65819262, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1269014086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269014075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49803d9628b63dd4aa9d7f599bd0a054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStateSO: {fileID: 11400000, guid: b419df8555e1af446816c35883f1c20a, type: 2}
+  playerSO: {fileID: 11400000, guid: c8e6b37e3958545448c9206ba5c0c653, type: 2}
+  rb: {fileID: 0}
+  sr: {fileID: 0}
+  movementSpeed: 80
+  dashCoolDown: 1
+  dashLength: 0.15
+  dashSpeed: 5
+  applyRecoil: 0
+  recoilLength: 0.2
+  recoilPower: 100
+  recoilDirection: {x: 0, y: 0}
+  invulnerabilityTime: 0
+  isHurt: 0
 --- !u!1 &1523469114
 GameObject:
   m_ObjectHideFlags: 0
@@ -6901,7 +7061,7 @@ GameObject:
   - component: {fileID: 1587958001}
   - component: {fileID: 1587958000}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Bullet Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7135,7 +7295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ir: {fileID: 1666311391}
-  playerData: {fileID: 11400000, guid: c8e6b37e3958545448c9206ba5c0c653, type: 2}
+  playerSO: {fileID: 11400000, guid: c8e6b37e3958545448c9206ba5c0c653, type: 2}
   fillAmount: 0
   barType: 1
 --- !u!114 &1666311391
@@ -7755,7 +7915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ir: {fileID: 2097479432}
-  playerData: {fileID: 11400000, guid: c8e6b37e3958545448c9206ba5c0c653, type: 2}
+  playerSO: {fileID: 11400000, guid: c8e6b37e3958545448c9206ba5c0c653, type: 2}
   fillAmount: 0
   barType: 0
 --- !u!1 &2135555348
@@ -7770,7 +7930,7 @@ GameObject:
   - component: {fileID: 2135555351}
   - component: {fileID: 2135555350}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7847,3 +8007,4 @@ SceneRoots:
   - {fileID: 2001344616}
   - {fileID: 1077284300}
   - {fileID: 989213980}
+  - {fileID: 112484476}

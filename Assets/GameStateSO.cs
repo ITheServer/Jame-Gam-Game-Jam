@@ -17,4 +17,8 @@ public class GameStateSO : ScriptableObject
     public int slimesKilled;
 
     public bool isPlayerAlive;
+
+    public bool currentRound;
+    public bool roundTimer;
+    public bool roundCompleted;
 }

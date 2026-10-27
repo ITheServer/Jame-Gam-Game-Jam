@@ -4,23 +4,14 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private bool canHurtPlayer;
-    [SerializeField] private PlayerData playerData;
+    public PlayerData playerData;
+    [SerializeField] private PlayerSO playerSO;
     [SerializeField] private float moveSpeed;
     public Vector3 moveDirection;
     private Rigidbody2D rb;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        if (!canHurtPlayer)
-        {
-            Vector3 mousePos = Input.mousePosition;
-            moveDirection = Camera.main.ScreenToWorldPoint(mousePos) - transform.position;
-            moveDirection.z = 0;
-            moveDirection = moveDirection.normalized;
-            playerData.recoilDirection = -moveDirection;
-            playerData.applyRecoil = true;
-        }
     }
 
     // Update is called once per frame

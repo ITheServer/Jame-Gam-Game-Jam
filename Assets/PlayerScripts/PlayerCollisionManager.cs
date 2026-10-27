@@ -5,20 +5,11 @@ using UnityEngine;
 public class PlayerCollisionManager : MonoBehaviour
 {
     [SerializeField] private PlayerData playerData;
-    [SerializeField] private GameStateSO gameStateSO;
     private SpriteRenderer sr;
     private Rigidbody2D rb;
     [SerializeField] private GameObject pickupSFX;
     [SerializeField] private GameObject hurtSFX;
 
-    void Awake()
-    {
-        gameStateSO.isPlayerAlive = true;
-        playerData.maxHealth = 6;
-        playerData.health = playerData.maxHealth;
-        sr = GetComponent<SpriteRenderer>();
-        rb = GetComponent<Rigidbody2D>();
-    }
     private void Update()
     {
         playerData.invulnerabilityTime -= Time.deltaTime;
@@ -29,21 +20,21 @@ public class PlayerCollisionManager : MonoBehaviour
         {
             if (playerData.invulnerabilityTime < 0)
             {
-                playerData.health--;
-                if (playerData.health == 0)
+                playerData.playerSO.health--;
+                if (playerData.playerSO.health == 0)
                 {
-                    gameStateSO.isPlayerAlive = false;
+                    playerData.gameStateSO.isPlayerAlive = false;
                 }
                 Instantiate(hurtSFX);
-                playerData.invulnerabilityTime = 0.3f;
-                playerData.isHurt = true;
+                playerData.playerSO.invulnerabilityTime = 0.3f;
+                playerData.playerSO.isHurt = true;
             }
         }
         if (collision.gameObject.CompareTag("Pickup"))//heal
         {
-            if (playerData.health < playerData.maxHealth)
+            if (playerData.playerSO.health < playerData.playerSO.maxHealth)
             {
-                playerData.health++;
+                playerData.playerSO.health++;
                 Instantiate(pickupSFX);
                 Destroy(collision.gameObject);
             }

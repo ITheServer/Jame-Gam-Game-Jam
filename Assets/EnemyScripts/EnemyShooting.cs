@@ -9,9 +9,9 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private float maxCoolDown;
     [SerializeField] private int bulletsPerChamber;
     [SerializeField] private int bulletsLeft;
-    [SerializeField] private int reloadTime;
+    [SerializeField] private float reloadTime;
     [SerializeField] private int bulletsShotAtOnce;
-    [SerializeField] private int coneOfAccuracy;
+    [SerializeField] private float coneOfAccuracy;
     [SerializeField] private GameObject shotSFX;
     [SerializeField] private GameObject spawnSFX;
 

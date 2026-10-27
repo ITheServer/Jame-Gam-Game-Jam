@@ -2,21 +2,48 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PlayerSO")]
-public class PlayerData : ScriptableObject
+public class PlayerData : MonoBehaviour
 {
-    public Vector2 recoilDirection;
-    public bool applyRecoil;
-    public float recoilPower;
-    public float dashMultiplier;
+    public GameStateSO gameStateSO;
+    public PlayerSO playerSO;
+    [HideInInspector] public Rigidbody2D rb;
+    [HideInInspector] public SpriteRenderer sr;
 
-    public int health;
-    public int maxHealth;
+    public float movementSpeed;
+    public float dashCoolDown;
+    public float dashLength;
+    public float dashSpeed;
+
+    public bool applyRecoil;
+    public float recoilLength;
+    public float recoilPower;
+    public Vector2 recoilDirection;
 
     public float invulnerabilityTime;
     public bool isHurt;
+    // Start is called before the first frame update
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            Debug.Log("player rb set!");
+        }
+        sr = GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            Debug.Log("player sr set!");
+        }
+        applyRecoil = false;
 
-    public float bullets;
-    public float bulletsPerChamber;
-    public float reloadTime;
+        gameStateSO.isPlayerAlive = true;
+        playerSO.maxHealth = 6;
+        playerSO.health = playerSO.maxHealth;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }

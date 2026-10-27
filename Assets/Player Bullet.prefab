@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4bbd4caf7565bc4e901b74c50ec8fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canHurtPlayer: 0
-  playerData: {fileID: 11400000, guid: c8e6b37e3958545448c9206ba5c0c653, type: 2}
+  playerData: {fileID: 0}
+  playerSO: {fileID: 11400000, guid: c8e6b37e3958545448c9206ba5c0c653, type: 2}
   moveSpeed: 400
   moveDirection: {x: 0, y: 0, z: 0}
 --- !u!50 &2058791942172868561

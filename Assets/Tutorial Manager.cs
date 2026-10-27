@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class TutorialManager : MonoBehaviour
 {
     [SerializeField] private GameStateSO gameStateSO;
-    [SerializeField] private PlayerData playerData;
+    [SerializeField] private PlayerSO playerData;
     [SerializeField] private GameObject enemySpawner;
     [SerializeField] private GameObject scoreKeepers;
     [SerializeField] private GameObject pinkSlime;
