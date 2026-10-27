@@ -1,2 +1,3 @@
 # Jame Gam Game Jam
-Bullet Hell made for Jame Gam Game Jam
+Slime Survivors, a Bullet Hell made for Jame Gam Game Jam in two days with the Unity game engine.
+It's open source so do what you want with it!
