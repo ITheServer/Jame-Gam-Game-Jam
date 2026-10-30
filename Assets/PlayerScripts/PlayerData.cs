@@ -41,9 +41,4 @@ public class PlayerData : MonoBehaviour
         playerSO.health = playerSO.maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

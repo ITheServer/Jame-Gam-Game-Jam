@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5148896814873120448}
   - component: {fileID: 6377695368942384478}
   - component: {fileID: 2599594690906511061}
+  - component: {fileID: 3739395530436501799}
   m_Layer: 0
   m_Name: Starfish Buffer
   m_TagString: Untagged
@@ -100,3 +101,16 @@ MonoBehaviour:
   enemyToSpawn: {fileID: 8537138929980313348, guid: fd72a0cd2ed3a4c41a636b4a6e785950, type: 3}
   spawnBuffer: 1.5
   currentBuffer: 0
+--- !u!114 &3739395530436501799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4160279671554262494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a10a821e6882f424ca6c6539357f8dad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStateSO: {fileID: 11400000, guid: b419df8555e1af446816c35883f1c20a, type: 2}

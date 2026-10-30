@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 236911138504442690}
   - component: {fileID: 503232594346583907}
   - component: {fileID: 1657839163078224990}
+  - component: {fileID: 5819900880156207423}
   m_Layer: 0
   m_Name: Shotgun Buffer
   m_TagString: Untagged
@@ -100,3 +101,16 @@ MonoBehaviour:
   enemyToSpawn: {fileID: 7285260509851345125, guid: eea30220305449e46a853364e2de1ad5, type: 3}
   spawnBuffer: 1.5
   currentBuffer: 0
+--- !u!114 &5819900880156207423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2222706279871320421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a10a821e6882f424ca6c6539357f8dad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStateSO: {fileID: 11400000, guid: b419df8555e1af446816c35883f1c20a, type: 2}

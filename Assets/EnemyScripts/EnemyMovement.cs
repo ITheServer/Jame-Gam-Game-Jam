@@ -6,7 +6,6 @@ public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private Vector2 moveDirection;
     private EnemyData enemyData;
-    [SerializeField] private GameStateSO gameStateSO;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float directionChangeTimer;
     [SerializeField] private float directionChangeRateMin;
@@ -16,10 +15,6 @@ public class EnemyMovement : MonoBehaviour
 
     [SerializeField] private float recoilTimer;
     [SerializeField] private float recoilLength;
-    [SerializeField] private GameObject deathEffect;
-    [SerializeField] private GameObject heal;
-    [SerializeField] private GameObject hitSFX;
-    [SerializeField] private GameObject pickupSFX;
 
 
     void Start()
@@ -47,11 +42,6 @@ public class EnemyMovement : MonoBehaviour
             enemyData.applyRecoil = false;
             recoilTimer = recoilLength;
         }
-        if (!gameStateSO.isPlayerAlive)
-        {
-            Destroy(gameObject);
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
-        }
     }
     private void FixedUpdate()
     {
@@ -64,26 +54,9 @@ public class EnemyMovement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        moveDirection = -moveDirection;//simple fix to send enemy back where it came from when it hits a wall
-        if (collision.gameObject.CompareTag("Player Bullet"))
+        if (collision.gameObject.CompareTag("Wall"))
         {
-            enemyData.damageTimer = 0.3f;
-            enemyData.health--;
-            gameStateSO.shotsLanded++;
-            gameStateSO.score += 1;
-            Instantiate(hitSFX);
-            if (enemyData.health <= 0)
-            {
-                Destroy(gameObject);
-                Instantiate(deathEffect, transform.position, Quaternion.identity);
-                if (Random.Range(0,20) == 0)//5% chance for health pickup
-                {
-                    Instantiate(pickupSFX);
-                    Instantiate(heal, transform.position, Quaternion.identity);
-                }
-                gameStateSO.score += 10;
-                gameStateSO.slimesKilled++;
-            }
+            moveDirection = -moveDirection;//simple fix to send enemy back where it came from when it hits a wall
         }
     }
     private void GetMoveDirection()

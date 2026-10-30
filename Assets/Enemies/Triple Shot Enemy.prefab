@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4610464636821399410}
   - component: {fileID: 5195160136196066132}
   - component: {fileID: 4112934760994848346}
+  - component: {fileID: -7590280306929567350}
   - component: {fileID: 6279270453326809172}
   - component: {fileID: 5371062089347217766}
   - component: {fileID: 3085762114595429741}
@@ -128,6 +129,24 @@ MonoBehaviour:
   rb: {fileID: 0}
   sr: {fileID: 0}
   damageTimer: 0
+  gameStateSO: {fileID: 11400000, guid: b419df8555e1af446816c35883f1c20a, type: 2}
+--- !u!114 &-7590280306929567350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3560023954375380858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40428f36d34d43438303d8af62f8663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitSFX: {fileID: 6913542014127210663, guid: cf607f0a3f1a87849ab166fe87cee461, type: 3}
+  pickupSFX: {fileID: 9062036828881765445, guid: 98fdfcec93046f149bb0195dd2937656, type: 3}
+  deathEffect: {fileID: 6609161180395565274, guid: f1b503f40b8e2ea4b8ecbc9781622bf3, type: 3}
+  heal: {fileID: 5925720224332595885, guid: c9d5269de4f1b834aa6854cda5e932dc, type: 3}
+  money: {fileID: 4467041112574261081, guid: e59c2fb32bc73a54d8e3b72bab55d64a, type: 3}
 --- !u!114 &6279270453326809172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +194,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDirection: {x: 0, y: 0}
-  gameStateSO: {fileID: 11400000, guid: b419df8555e1af446816c35883f1c20a, type: 2}
   moveSpeed: 40
   directionChangeTimer: 0
   directionChangeRateMin: 1.2
@@ -184,10 +202,6 @@ MonoBehaviour:
   reverseDirection: 1
   recoilTimer: 0
   recoilLength: 0.3
-  deathEffect: {fileID: 6609161180395565274, guid: f1b503f40b8e2ea4b8ecbc9781622bf3, type: 3}
-  heal: {fileID: 5925720224332595885, guid: c9d5269de4f1b834aa6854cda5e932dc, type: 3}
-  hitSFX: {fileID: 6913542014127210663, guid: cf607f0a3f1a87849ab166fe87cee461, type: 3}
-  pickupSFX: {fileID: 9062036828881765445, guid: 98fdfcec93046f149bb0195dd2937656, type: 3}
 --- !u!50 &5303016688076933448
 Rigidbody2D:
   serializedVersion: 4

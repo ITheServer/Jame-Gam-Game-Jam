@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerCollisionManager : MonoBehaviour
 {
     [SerializeField] private PlayerData playerData;
-    private SpriteRenderer sr;
-    private Rigidbody2D rb;
     [SerializeField] private GameObject pickupSFX;
     [SerializeField] private GameObject hurtSFX;
 
@@ -26,11 +24,11 @@ public class PlayerCollisionManager : MonoBehaviour
                     playerData.gameStateSO.isPlayerAlive = false;
                 }
                 Instantiate(hurtSFX);
-                playerData.playerSO.invulnerabilityTime = 0.3f;
-                playerData.playerSO.isHurt = true;
+                playerData.invulnerabilityTime = 0.3f;
+                playerData.isHurt = true;
             }
         }
-        if (collision.gameObject.CompareTag("Pickup"))//heal
+        if (collision.gameObject.CompareTag("Heal"))
         {
             if (playerData.playerSO.health < playerData.playerSO.maxHealth)
             {
@@ -38,6 +36,12 @@ public class PlayerCollisionManager : MonoBehaviour
                 Instantiate(pickupSFX);
                 Destroy(collision.gameObject);
             }
+        }
+        if (collision.gameObject.CompareTag("Money"))
+        {
+            playerData.gameStateSO.money++;
+            Instantiate(pickupSFX);
+            Destroy(collision.gameObject);
         }
     }
 }

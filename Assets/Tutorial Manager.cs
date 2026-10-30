@@ -22,7 +22,14 @@ public class TutorialManager : MonoBehaviour
     void Start()
     {
         gameStateSO.isPlayerAlive = true;
-        gameStateSO.tutorialStep = 0;
+        if (gameStateSO.skipTutorial)
+        {
+            gameStateSO.tutorialStep = 2;
+        }
+        else
+        {
+            gameStateSO.tutorialStep = 0;
+        }
         gameStateSO.tutorialComplete = false;
         enemySpawner.SetActive(false);
         gameStateSO.slimesKilled = 0;

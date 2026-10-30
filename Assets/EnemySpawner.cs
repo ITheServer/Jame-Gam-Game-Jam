@@ -26,7 +26,7 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameStateSO.isPlayerAlive)
+        if (gameStateSO.isPlayerAlive && !gameStateSO.roundCompleted)
         {
             gameStateSO.survivalTimer += Time.deltaTime;
             gameStateSO.difficultyScaling = gameStateSO.survivalTimer / 300 + 1;

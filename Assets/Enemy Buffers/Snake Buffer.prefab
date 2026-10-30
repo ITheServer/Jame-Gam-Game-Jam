@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9103441946833348539}
   - component: {fileID: 3258077162575944604}
   - component: {fileID: 559468057094473671}
+  - component: {fileID: -8798978946826114995}
   m_Layer: 0
   m_Name: Snake Buffer
   m_TagString: Untagged
@@ -100,3 +101,16 @@ MonoBehaviour:
   enemyToSpawn: {fileID: 3560023954375380858, guid: 3d23069f4c2d1a041a219261b39a4a1c, type: 3}
   spawnBuffer: 1.5
   currentBuffer: 0
+--- !u!114 &-8798978946826114995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2773986936666267511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a10a821e6882f424ca6c6539357f8dad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStateSO: {fileID: 11400000, guid: b419df8555e1af446816c35883f1c20a, type: 2}

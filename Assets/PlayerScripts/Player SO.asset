@@ -13,17 +13,18 @@ MonoBehaviour:
   m_Name: Player SO
   m_EditorClassIdentifier: 
   recoilDirection: {x: 0, y: 0}
-  applyRecoil: 0
-  recoilPower: 0
-  dashMultiplier: 0
-  health: 3
+  applyRecoil: 1
+  recoilPower: 100
+  dashMultiplier: 50
+  health: 6
   maxHealth: 6
-  invulnerabilityTime: 0.3
-  isHurt: 1
-  bullets: 6
+  bullets: 8
   bulletsPerChamber: 12
-  shotCooldown: 2
-  reloadTime: 1
-  bulletsShotAtOnce: 3
-  coneOfAccuracy: 45
-  currentCharacter: 10
+  shotCooldown: 0.3
+  reloadTime: 2
+  bulletsShotAtOnce: 1
+  coneOfAccuracy: 0
+  bulletPierce: 0
+  bulletBounce: 0
+  currentCharacter: 0
+  totalCharacters: 2

@@ -44,7 +44,7 @@ public class EnemyShooting : MonoBehaviour
                     EnemyBullet enemyBullet = spawnedBullet.GetComponent<EnemyBullet>();
                     enemyBullet.enemyData = enemyData;//pass on current enemy data to bullet.
                     Vector2 bulletDirection = (enemyData.player.transform.position - transform.position).normalized;
-                    var rotation = Quaternion.AngleAxis((coneOfAccuracy / bulletsShotAtOnce * i) - coneOfAccuracy / 2, Vector3.forward).normalized;
+                    var rotation = Quaternion.AngleAxis((coneOfAccuracy / bulletsShotAtOnce * i) - coneOfAccuracy / bulletsShotAtOnce, Vector3.forward).normalized;
                     Debug.Log(rotation);
                     enemyBullet.moveDirection = (rotation * bulletDirection).normalized;
                 }

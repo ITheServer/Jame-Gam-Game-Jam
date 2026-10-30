@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 515835997812770465}
   - component: {fileID: 2821295055761829136}
   - component: {fileID: 442597318561492417}
+  - component: {fileID: 4560166759778613419}
   m_Layer: 0
   m_Name: Golem Buffer
   m_TagString: Untagged
@@ -100,3 +101,16 @@ MonoBehaviour:
   enemyToSpawn: {fileID: 3499552403853827241, guid: 1d4143af7038e1048a50589f22c06dc9, type: 3}
   spawnBuffer: 1.5
   currentBuffer: 0
+--- !u!114 &4560166759778613419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980454284883415872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a10a821e6882f424ca6c6539357f8dad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStateSO: {fileID: 11400000, guid: b419df8555e1af446816c35883f1c20a, type: 2}

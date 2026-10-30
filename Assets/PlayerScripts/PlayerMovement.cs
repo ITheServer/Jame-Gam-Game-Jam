@@ -60,6 +60,14 @@ public class PlayerMovement : MonoBehaviour
                     Instantiate(dashSFX);
                     playerData.invulnerabilityTime = playerData.dashLength + 0.1f;
                     //extra time accounts for deacceleration
+
+                    //This code changes dashing from WASD to mouse position.
+                    //It does not work very well as you can't aim independently from your dash direction
+                    //so backing away from enemies you have your gun pointed at is a lot more annoying.
+
+                    //Vector3 mousePos = Input.mousePosition;
+                    //movementDirection = Camera.main.ScreenToWorldPoint(mousePos) - transform.position;
+                    //movementDirection = movementDirection.normalized;//calculate dash direction based on mouse position
                 }
                 playerData.rb.AddForce(playerData.movementSpeed * Time.deltaTime * movementDirection.normalized, ForceMode2D.Impulse);
             }

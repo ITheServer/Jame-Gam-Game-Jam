@@ -15,6 +15,7 @@ public class EnemyData : MonoBehaviour
     public Rigidbody2D rb;
     public SpriteRenderer sr;
     public float damageTimer;
+    public GameStateSO gameStateSO;
 
     private void Awake()
     {

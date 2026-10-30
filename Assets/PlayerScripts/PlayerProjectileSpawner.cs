@@ -84,7 +84,8 @@ public class PlayerProjectileSpawner : MonoBehaviour
                             //if multiple bullets are spawned, calculate offset for each bullet based on accuracy
                             if (playerData.playerSO.bulletsShotAtOnce > 1)
                             {
-                                var rotation = Quaternion.AngleAxis((playerData.playerSO.coneOfAccuracy / playerData.playerSO.bulletsShotAtOnce * i) - playerData.playerSO.coneOfAccuracy / 2, Vector3.forward).normalized;
+
+                                var rotation = Quaternion.AngleAxis((playerData.playerSO.coneOfAccuracy / playerData.playerSO.bulletsShotAtOnce * (i - playerData.playerSO.bulletsShotAtOnce / 2)), Vector3.forward).normalized;
                                 Debug.Log(rotation);
                                 playerBullet.moveDirection = (rotation * bulletDirection).normalized;
                             }

@@ -6,6 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Game State SO")]
 public class GameStateSO : ScriptableObject
 {
+    public bool skipTutorial;
+
     public float survivalTimer;
     public float difficultyScaling;
     public int score;
@@ -18,7 +20,12 @@ public class GameStateSO : ScriptableObject
 
     public bool isPlayerAlive;
 
-    public bool currentRound;
-    public bool roundTimer;
+    public int currentRound;
+    public float roundTimer;
     public bool roundCompleted;
+
+    public int extraBullets;
+    public int extraHealth;
+    
+    public int money;
 }

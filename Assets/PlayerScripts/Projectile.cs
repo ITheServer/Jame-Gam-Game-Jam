@@ -7,10 +7,15 @@ public class Projectile : MonoBehaviour
     public PlayerData playerData;
     [SerializeField] private PlayerSO playerSO;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float piercesLeft;
+    [SerializeField] private float bouncesLeft;
     public Vector3 moveDirection;
     private Rigidbody2D rb;
     void Awake()
     {
+        piercesLeft = playerSO.bulletPierce;
+        bouncesLeft = playerSO.bulletBounce;
+        //piercesLeft = 0;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -37,6 +42,10 @@ public class Projectile : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+        piercesLeft--;
+        if (piercesLeft < 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

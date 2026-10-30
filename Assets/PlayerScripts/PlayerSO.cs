@@ -13,16 +13,16 @@ public class PlayerSO : ScriptableObject
     public int health;
     public int maxHealth;
 
-    public float invulnerabilityTime;
-    public bool isHurt;
-
     public float bullets;
     public float bulletsPerChamber;
     public float shotCooldown;
     public float reloadTime;
     public int bulletsShotAtOnce;
     public float coneOfAccuracy;
+    public int bulletPierce;
+    public int bulletBounce;
 
     public int currentCharacter;
+    public int totalCharacters;
 
 }

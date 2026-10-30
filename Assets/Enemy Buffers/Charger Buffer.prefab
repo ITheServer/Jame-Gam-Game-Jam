@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8857009146789075089}
   - component: {fileID: 3300425306759193281}
   - component: {fileID: 2919323549937892316}
+  - component: {fileID: -3399225732855666233}
   m_Layer: 0
   m_Name: Charger Buffer
   m_TagString: Untagged
@@ -100,3 +101,16 @@ MonoBehaviour:
   enemyToSpawn: {fileID: 7096850932282781553, guid: 4e3ffb4b551bf0146810248213771369, type: 3}
   spawnBuffer: 1.5
   currentBuffer: 0
+--- !u!114 &-3399225732855666233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967105496274183898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a10a821e6882f424ca6c6539357f8dad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStateSO: {fileID: 11400000, guid: b419df8555e1af446816c35883f1c20a, type: 2}

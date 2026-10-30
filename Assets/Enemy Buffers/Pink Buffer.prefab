@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2970462597370855363}
   - component: {fileID: 8613549706484258832}
   - component: {fileID: 3345177163779204929}
+  - component: {fileID: -3828759039952750826}
   m_Layer: 0
   m_Name: Pink Buffer
   m_TagString: Untagged
@@ -100,3 +101,16 @@ MonoBehaviour:
   enemyToSpawn: {fileID: 3143930091646815327, guid: 68d4b8de0ac802d4fa7c7ff80ef1aa45, type: 3}
   spawnBuffer: 1.5
   currentBuffer: 0
+--- !u!114 &-3828759039952750826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7128483925385856454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a10a821e6882f424ca6c6539357f8dad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStateSO: {fileID: 11400000, guid: b419df8555e1af446816c35883f1c20a, type: 2}

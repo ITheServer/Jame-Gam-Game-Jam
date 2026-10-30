@@ -11,7 +11,7 @@ public class PlayerSprite : MonoBehaviour
     [SerializeField] private Sprite playerDead;
 
 
-    void Awake()
+    void Start()
     {
         baseMaterial = playerData.sr.material;
         playerData.isHurt = false;

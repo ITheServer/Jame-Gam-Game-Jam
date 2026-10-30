@@ -102,6 +102,8 @@ MonoBehaviour:
   playerData: {fileID: 0}
   playerSO: {fileID: 11400000, guid: c8e6b37e3958545448c9206ba5c0c653, type: 2}
   moveSpeed: 400
+  piercesLeft: 0
+  bouncesLeft: 0
   moveDirection: {x: 0, y: 0, z: 0}
 --- !u!50 &2058791942172868561
 Rigidbody2D:
